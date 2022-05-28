@@ -1,0 +1,6 @@
+name: Casinos
+version: '${version}'
+main: xyz.novaserver.casinos.Casinos
+api-version: 1.18
+depend: [ NovaMechanics ]
+authors: [ Nova ]
