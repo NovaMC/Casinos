@@ -1,6 +1,4 @@
-package xyz.novaserver.casinos;
-
-import xyz.novaserver.casinos.card.Card;
+package xyz.novaserver.casinos.card;
 
 import java.util.ArrayList;
 import java.util.Collection;

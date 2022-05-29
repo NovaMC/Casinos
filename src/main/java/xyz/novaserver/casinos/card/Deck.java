@@ -1,35 +1,33 @@
 package xyz.novaserver.casinos.card;
 
+import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
-public class Deck
-{
+public class Deck {
     private final LinkedList<Card> cards = new LinkedList<>();
-    public Deck() {
-        this(1);
-    }
 
-    public Deck(int decks) {
-        for(int x = 0; x < decks; x++) {
-            fillDeck();
-        }
-    }
-
-    public void fillDeck() {
-        for(Card.Suit s : Card.Suit.values()) {
-            for(int x = 1; x <= 13; x++) {
-                cards.add(new Card(s, x));
+    public void fillDeck(int sets) {
+        for (int x = 0; x < sets; x++) {
+            for (Card.Suit s : Card.Suit.values()) {
+                for (int y = 1; y <= 13; y++) {
+                    cards.add(new Card(s, x));
+                }
             }
         }
+    }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
     }
 
     public void addCard(Card card) {
         cards.addLast(card);
     }
 
-    public void shuffle() {
-        Collections.shuffle(cards);
+    public void addAllCards(Collection<Card> cards) {
+        this.cards.addAll(cards);
     }
 
     public Card takeCard() {
@@ -40,4 +38,7 @@ public class Deck
         return cards.getFirst();
     }
 
+    public List<Card> getCards() {
+        return cards;
+    }
 }
