@@ -1,4 +1,4 @@
-package xyz.novaserver.casinos.card;
+package xyz.novaserver.casinos.objects.card;
 
 import java.util.Collection;
 import java.util.Collections;

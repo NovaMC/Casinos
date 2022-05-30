@@ -1,7 +1,7 @@
 package xyz.novaserver.casinos.games.blackjack;
 
 import org.bukkit.entity.Player;
-import xyz.novaserver.casinos.card.Hand;
+import xyz.novaserver.casinos.objects.card.Hand;
 
 public class BlackjackPlayer {
     private final Player player;

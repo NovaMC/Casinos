@@ -1,7 +1,7 @@
 package xyz.novaserver.casinos.games.blackjack;
 
 import org.bukkit.entity.Player;
-import xyz.novaserver.casinos.card.Deck;
+import xyz.novaserver.casinos.objects.card.Deck;
 
 import java.util.*;
 
@@ -17,11 +17,11 @@ public class BlackjackMatch {
         deck.shuffle();
     }
 
-    private boolean containsPlayer(Player player) {
+    public boolean containsPlayer(Player player) {
         return players.containsKey(player.getUniqueId());
     }
 
-    private BlackjackPlayer getPlayer(Player player) {
+    public BlackjackPlayer getPlayer(Player player) {
         return players.get(player.getUniqueId());
     }
 }
